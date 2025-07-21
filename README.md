@@ -8,7 +8,7 @@ Contains the game code for Half-Life 2, HL2: DM and TF2.
 
 Clone the repository using the following command:
 
-`git clone https://github.com/ValveSoftware/source-sdk-2013`
+`git clone https://github.com/yungDoom/source-sdk-2013-extended`
 
 ### Windows
 
