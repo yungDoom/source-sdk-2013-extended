@@ -11,6 +11,10 @@
 #include <KeyValues.h>
 #include "ammodef.h"
 
+#ifdef GE_LUA
+#include "my_lua_handle.h"
+#endif
+
 #ifdef CLIENT_DLL
 	#include "c_hl2mp_player.h"
 #else
@@ -183,6 +187,10 @@ char *sTeamNames[] =
 CHL2MPRules::CHL2MPRules()
 {
 #ifndef CLIENT_DLL
+	if (!GetLuaHandle()) {
+		new MyLuaHandle(); // This will call Init() and load your Lua script
+		Msg("[Lua] Lua script triggered on lobby creation.\n");
+	}
 	// Create the team managers
 	for ( int i = 0; i < ARRAYSIZE( sTeamNames ); i++ )
 	{
