@@ -3532,10 +3532,10 @@
     <ClCompile Include="toolframework_client.cpp">
       <Filter>Tool Framework</Filter>
     </ClCompile>
-    <ClCompile Include="..\server\my_lua_handle.cpp">
+    <ClCompile Include="hl2\c_weapon_gravitygun.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="hl2\c_weapon_gravitygun.cpp">
+    <ClCompile Include="..\server\my_lua_handle.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

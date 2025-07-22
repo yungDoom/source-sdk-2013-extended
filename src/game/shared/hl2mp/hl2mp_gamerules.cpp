@@ -12,7 +12,7 @@
 #include "ammodef.h"
 
 #ifdef GE_LUA
-#include "my_lua_handle.h"
+#include "..\..\server\my_lua_handle.h"
 #endif
 
 #ifdef CLIENT_DLL

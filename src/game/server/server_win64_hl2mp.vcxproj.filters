@@ -2024,6 +2024,9 @@
     <ClInclude Include="my_lua_handle.h">
       <Filter>Source Files</Filter>
     </ClInclude>
+    <ClInclude Include="ge_luamanager.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="gamedll_replay.cpp">
@@ -3902,6 +3905,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="physgun.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ge_luamanager.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
