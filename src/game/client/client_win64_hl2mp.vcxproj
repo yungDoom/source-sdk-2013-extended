@@ -64,11 +64,8 @@
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <PreBuildEvent>
-      <Command>if EXIST ..\..\..\game\mod_hl2mp\bin\x64\$(TargetFileName) for /f "delims=" %%A in ('attrib "..\..\..\game\mod_hl2mp\bin\x64\$(TargetFileName)"') do set valveTmpIsReadOnly="%%A"
-set valveTmpIsReadOnlyLetter=%valveTmpIsReadOnly:~6,1%
-if "%valveTmpIsReadOnlyLetter%"=="R" del /q "$(TargetDir)"$(TargetFileName)
-..\..\devtools\bin\vpc.exe -crc2 "client_win64_hl2mp.vcxproj"
-</Command>
+      <Command>
+      </Command>
     </PreBuildEvent>
     <ClCompile>
       <AdditionalOptions>/Zm200 /Gw /Zc:inline /Zc:threadSafeInit- /Wv:18 /Zc:__cplusplus</AdditionalOptions>
@@ -154,11 +151,8 @@ exit 1
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <PreBuildEvent>
-      <Command>if EXIST ..\..\..\game\mod_hl2mp\bin\x64\$(TargetFileName) for /f "delims=" %%A in ('attrib "..\..\..\game\mod_hl2mp\bin\x64\$(TargetFileName)"') do set valveTmpIsReadOnly="%%A"
-set valveTmpIsReadOnlyLetter=%valveTmpIsReadOnly:~6,1%
-if "%valveTmpIsReadOnlyLetter%"=="R" del /q "$(TargetDir)"$(TargetFileName)
-..\..\devtools\bin\vpc.exe -crc2 "client_win64_hl2mp.vcxproj"
-</Command>
+      <Command>
+      </Command>
     </PreBuildEvent>
     <ClCompile>
       <AdditionalOptions>/Zm200 /Zo /Gw /Zc:inline /Zc:threadSafeInit- /Wv:18 /Zc:__cplusplus</AdditionalOptions>
