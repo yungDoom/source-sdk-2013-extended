@@ -52,6 +52,8 @@ server.dylib.dSYM/
 /game/mod_hl2mp/cfg/settings.scr
 /game/platform/config/InGameDialogConfig.vdf
 /game/mod_hl2mp/cfg/server_blacklist.txt
+/game/mod_hl2mp/ServerConfig.vdf
+/src/launcher_main/steam_appid.txt
 /game/steam_appid.txt
 ## Source Engine Extended Ignorations ##
 
