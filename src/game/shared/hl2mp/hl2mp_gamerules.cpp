@@ -187,10 +187,12 @@ char *sTeamNames[] =
 CHL2MPRules::CHL2MPRules()
 {
 #ifndef CLIENT_DLL
+    #ifdef GE_LUA
 	if (!GetLuaHandle()) {
 		new MyLuaHandle(); // This will call Init() and load your Lua script
 		Msg("[Lua] Lua script triggered on lobby creation.\n");
 	}
+    #endif
 	// Create the team managers
 	for ( int i = 0; i < ARRAYSIZE( sTeamNames ); i++ )
 	{

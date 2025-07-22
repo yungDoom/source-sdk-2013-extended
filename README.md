@@ -32,8 +32,6 @@ The default launch options should be already filled in for the `Release` configu
 
 ### Linux
 
-**NOTE:** Linux might not be fully supported, and some features may not work as expected.
-
 Requirements:
  - Source SDK 2013 Multiplayer installed via Steam
  - podman
