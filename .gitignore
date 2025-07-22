@@ -502,3 +502,5 @@ FodyWeavers.xsd
 
 # JetBrains Rider
 *.sln.iml
+/game/mod_hl2mp/cfg/server_blacklist.txt
+/game/steam_appid.txt
