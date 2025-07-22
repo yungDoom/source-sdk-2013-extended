@@ -2,7 +2,7 @@
 
 Source code for Source SDK 2013.
 
-Contains the game code for Half-Life 2, HL2: DM and TF2.
+Contains the game code for Half-Life 2 and Half-Life 2 Deathmatch.
 
 ## Build instructions
 
