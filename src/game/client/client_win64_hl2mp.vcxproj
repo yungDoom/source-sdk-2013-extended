@@ -74,7 +74,7 @@ if "%valveTmpIsReadOnlyLetter%"=="R" del /q "$(TargetDir)"$(TargetFileName)
       <AdditionalOptions>/Zm200 /Gw /Zc:inline /Zc:threadSafeInit- /Wv:18 /Zc:__cplusplus</AdditionalOptions>
       <Optimization>Disabled</Optimization>
       <AdditionalIncludeDirectories>.\;..\..\common;..\..\public;..\..\public\tier0;..\..\public\tier1;..\..\game\client\generated_proto_mod_hl2mp;..\..\thirdparty\protobuf-2.6.1\src;..\..\vgui2\include;..\..\vgui2\controls;..\..\game\shared;.\game_controls;..\..\thirdparty\sixensesdk\include;hl2mp\ui;.\hl2mp;..\..\game\shared\hl2mp;.\hl2;.\hl2\elements;..\..\game\shared\hl2</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>VPC;SOURCESDK;SOURCE_HAS_FREETYPE;WIN32;_WIN32;_DEBUG;DEBUG;_WINDOWS;_USRDLL;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;%(PreprocessorDefinitions);PLATFORM_64BITS;WIN64;_WIN64;COMPILER_MSVC64;PLATFORM_64BITS;WIN64;_WIN64;COMPILER_MSVC64;COMPILER_MSVC;_DLL_EXT=.dll;DLLNAME=client;DEV_BUILD;FRAME_POINTER_OMISSION_DISABLED;NO_STRING_T;CLIENT_DLL;VECTOR;VERSION_SAFE_STEAM_API_INTERFACES;PROTECTED_THINGS_ENABLE;strncpy=use_Q_strncpy_instead;_snprintf=use_Q_snprintf_instead;INCLUDED_STEAM2_USERID_STRUCTS;HL2MP;HL2_CLIENT_DLL;NEXT_BOT;_DLL_EXT=.dll;_DLL_PREFIX=;_EXTERNAL_DLL_EXT=.dll;PROJECTDIR=D:\SourceStuff\source-sdk-2013-extended\src\game\client;VPCGAME=valve;VPCGAMECAPS=VALVE</PreprocessorDefinitions>
+      <PreprocessorDefinitions>VPC;SOURCESDK;SOURCE_HAS_FREETYPE;WIN32;_WIN32;_DEBUG;DEBUG;_WINDOWS;_USRDLL;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;%(PreprocessorDefinitions);PLATFORM_64BITS;WIN64;_WIN64;COMPILER_MSVC64;COMPILER_MSVC;_DLL_EXT=.dll;DLLNAME=client;DEV_BUILD;FRAME_POINTER_OMISSION_DISABLED;NO_STRING_T;CLIENT_DLL;VECTOR;VERSION_SAFE_STEAM_API_INTERFACES;PROTECTED_THINGS_ENABLE;strncpy=use_Q_strncpy_instead;_snprintf=use_Q_snprintf_instead;INCLUDED_STEAM2_USERID_STRUCTS;HL2MP;HL2_CLIENT_DLL;NEXT_BOT;_DLL_PREFIX=;_EXTERNAL_DLL_EXT=.dll;PROJECTDIR=D:\SourceStuff\source-sdk-2013-extended\src\game\client;VPCGAME=valve;VPCGAMECAPS=VALVE;GE_LUA</PreprocessorDefinitions>
       <StringPooling>true</StringPooling>
       <ExceptionHandling>false</ExceptionHandling>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
@@ -108,11 +108,11 @@ if "%valveTmpIsReadOnlyLetter%"=="R" del /q "$(TargetDir)"$(TargetFileName)
     <PreLinkEvent />
     <Link>
       <AdditionalOptions> /ignore:4221</AdditionalOptions>
-      <AdditionalDependencies>;shell32.lib;user32.lib;advapi32.lib;gdi32.lib;comdlg32.lib;ole32.lib;winmm.lib</AdditionalDependencies>
+      <AdditionalDependencies>shell32.lib;user32.lib;advapi32.lib;gdi32.lib;comdlg32.lib;lua54.lib;ole32.lib;winmm.lib</AdditionalDependencies>
       <ShowProgress>NotSet</ShowProgress>
       <OutputFile>$(OutDir)\client.dll</OutputFile>
       <SuppressStartupBanner>true</SuppressStartupBanner>
-      <AdditionalLibraryDirectories>..\..\lib\common\x64\2015\release;..\..\lib\public\x64</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>..\..\lib\common\x64\2015\release;..\..\lib\public\x64;..\..\Lua\</AdditionalLibraryDirectories>
       <IgnoreSpecificDefaultLibraries>libc;libcd;libcmt;libcpmt;libcpmt1</IgnoreSpecificDefaultLibraries>
       <GenerateDebugInformation>DebugFull</GenerateDebugInformation>
       <ProgramDatabaseFile>$(IntDir)/$(TargetName).pdb</ProgramDatabaseFile>

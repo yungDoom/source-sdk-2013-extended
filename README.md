@@ -22,19 +22,17 @@ Requirements:
      - Windows 11 SDK (10.0.22621.0) or Windows 10 SDK (10.0.19041.1)
  - Python 3.13 or later
 
-Inside the cloned directory, navigate to `src`, run:
-```bat
-createallprojects.bat
-```
-This will generate the Visual Studio project `everything.sln` which will be used to build your mod.
+Open `everything.sln` which will be used to build your mod.
 
 Then, on the menu bar, go to `Build > Build Solution`, and wait for everything to build.
 
-You can then select the `Client (Mod Name)` project you wish to run, right click and select `Set as Startup Project` and hit the big green `> Local Windows Debugger` button on the tool bar in order to launch your mod.
+You can then select the `Launcher Main (Mod Name)` project you wish to run, right click and select `Set as Startup Project` and hit the big green `> Local Windows Debugger` button on the tool bar in order to launch your mod.
 
 The default launch options should be already filled in for the `Release` configuration.
 
 ### Linux
+
+**NOTE:** Linux might not be fully supported, and some features may not work as expected.
 
 Requirements:
  - Source SDK 2013 Multiplayer installed via Steam
@@ -49,20 +47,10 @@ This will build all the projects related to the SDK and your mods automatically 
 
 You can then, in the root of the cloned directory, you can navigate to `game` and run your mod by launching the build launcher for your mod project, eg:
 ```bash
-./mod_tf
+./mod_hl2mp
 ```
 
 *Mods that are distributed on Steam MUST be built against the Steam Runtime, which the above steps will automatically do for you.*
-
-## Distributing your Mod
-
-There is guidance on distributing your mod both on and off Steam available at the following link:
-
-https://partner.steamgames.com/doc/sdk/uploading/distributing_source_engine
-
-## Additional Resources
-
-- [Valve Developer Wiki](https://developer.valvesoftware.com/wiki/Source_SDK_2013)
 
 ## License
 
