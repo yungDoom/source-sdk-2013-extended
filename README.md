@@ -28,7 +28,9 @@ Then, on the menu bar, go to `Build > Build Solution`, and wait for everything t
 
 You can then select the `Launcher Main (Mod Name)` project you wish to run, right click and select `Set as Startup Project` and hit the big green `> Local Windows Debugger` button on the tool bar in order to launch your mod.
 
-The default launch options should be already filled in for the `Release` configuration.
+Then Go into properties of that project, and under `Debugging`, find the `Command` and set it to `..\..\game\mod_hl2mp_win64.exe`.<br>
+This will allow you to run your mod directly from Visual Studio.
+
 
 ### Linux
 
