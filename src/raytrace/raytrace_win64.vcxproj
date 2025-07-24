@@ -55,10 +55,11 @@
     <PostBuildEventUseInBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</PostBuildEventUseInBuild>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <PreBuildEvent >
-      <Command>if EXIST ..\lib\public\x64\$(TargetName).lib ( for /f &quot;delims=&quot; %%A in (&apos;attrib &quot;..\lib\public\x64\$(TargetName).lib&quot;&apos;) do set valveTmpIsReadOnly=&quot;%%A&quot;&#x0D;&#x0A;) else ( mkdir ..\lib\public\x64 )&#x0D;&#x0A;set valveTmpIsReadOnlyLetter=%valveTmpIsReadOnly:~6,1%&#x0D;&#x0A;if &quot;%valveTmpIsReadOnlyLetter%&quot;==&quot;R&quot; (&#x0D;&#x0A;    attrib -r ..\lib\public\x64\$(TargetName).lib&#x0D;&#x0A;    ..\devtools\bin\gnu\touch.exe -d &quot;1999-01-01&quot; ..\lib\public\x64\$(TargetName).lib&#x0D;&#x0A;    attrib +r ..\lib\public\x64\$(TargetName).lib&#x0D;&#x0A;)&#x0D;&#x0A;..\devtools\bin\vpc.exe -crc2 &quot;raytrace_win64.vcxproj&quot;&#x0D;&#x0A;</Command>
+    <PreBuildEvent>
+      <Command>
+      </Command>
     </PreBuildEvent>
-    <ClCompile >
+    <ClCompile>
       <AdditionalOptions> /Gw /Zc:inline /Zc:threadSafeInit- /Wv:18 /Zc:__cplusplus</AdditionalOptions>
       <Optimization>Disabled</Optimization>
       <AdditionalIncludeDirectories>..\common;..\public;..\public\tier0;..\public\tier1;..\utils\common</AdditionalIncludeDirectories>
@@ -91,28 +92,29 @@
       <ErrorReporting>Prompt</ErrorReporting>
       <BuildStlModules>false</BuildStlModules>
     </ClCompile>
-    <PreLinkEvent  />
-    <Lib >
+    <PreLinkEvent />
+    <Lib>
       <UseUNICODEResponseFiles>false</UseUNICODEResponseFiles>
       <OutputFile>..\lib\public\x64\raytrace.lib</OutputFile>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <AdditionalOptions> /ignore:4221      </AdditionalOptions>
     </Lib>
-    <Xdcmake >
+    <Xdcmake>
       <SuppressStartupBanner>true</SuppressStartupBanner>
     </Xdcmake>
-    <Bscmake >
+    <Bscmake>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <OutputFile>$(OutDir)/raytrace.bsc</OutputFile>
     </Bscmake>
-    <PostBuildEvent  />
-    <CustomBuildStep  />
+    <PostBuildEvent />
+    <CustomBuildStep />
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
-    <PreBuildEvent >
-      <Command>if EXIST ..\lib\public\x64\$(TargetName).lib ( for /f &quot;delims=&quot; %%A in (&apos;attrib &quot;..\lib\public\x64\$(TargetName).lib&quot;&apos;) do set valveTmpIsReadOnly=&quot;%%A&quot;&#x0D;&#x0A;) else ( mkdir ..\lib\public\x64 )&#x0D;&#x0A;set valveTmpIsReadOnlyLetter=%valveTmpIsReadOnly:~6,1%&#x0D;&#x0A;if &quot;%valveTmpIsReadOnlyLetter%&quot;==&quot;R&quot; (&#x0D;&#x0A;    attrib -r ..\lib\public\x64\$(TargetName).lib&#x0D;&#x0A;    ..\devtools\bin\gnu\touch.exe -d &quot;1999-01-01&quot; ..\lib\public\x64\$(TargetName).lib&#x0D;&#x0A;    attrib +r ..\lib\public\x64\$(TargetName).lib&#x0D;&#x0A;)&#x0D;&#x0A;..\devtools\bin\vpc.exe -crc2 &quot;raytrace_win64.vcxproj&quot;&#x0D;&#x0A;</Command>
+    <PreBuildEvent>
+      <Command>
+      </Command>
     </PreBuildEvent>
-    <ClCompile >
+    <ClCompile>
       <AdditionalOptions> /Zo /Gw /Zc:inline /Zc:threadSafeInit- /Wv:18 /Zc:__cplusplus</AdditionalOptions>
       <Optimization>MaxSpeed</Optimization>
       <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
@@ -148,22 +150,22 @@
       <ErrorReporting>Prompt</ErrorReporting>
       <BuildStlModules>false</BuildStlModules>
     </ClCompile>
-    <PreLinkEvent  />
-    <Lib >
+    <PreLinkEvent />
+    <Lib>
       <UseUNICODEResponseFiles>false</UseUNICODEResponseFiles>
       <OutputFile>..\lib\public\x64\raytrace.lib</OutputFile>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <AdditionalOptions> /ignore:4221      </AdditionalOptions>
     </Lib>
-    <Xdcmake >
+    <Xdcmake>
       <SuppressStartupBanner>true</SuppressStartupBanner>
     </Xdcmake>
-    <Bscmake >
+    <Bscmake>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <OutputFile>$(OutDir)/raytrace.bsc</OutputFile>
     </Bscmake>
-    <PostBuildEvent  />
-    <CustomBuildStep  />
+    <PostBuildEvent />
+    <CustomBuildStep />
   </ItemDefinitionGroup>
   <ItemGroup />
   <ItemGroup />

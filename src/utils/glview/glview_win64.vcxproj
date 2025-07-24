@@ -59,10 +59,11 @@
     <PostBuildEventUseInBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</PostBuildEventUseInBuild>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <PreBuildEvent >
-      <Command>if EXIST ..\..\..\game\bin\x64\$(TargetFileName) for /f &quot;delims=&quot; %%A in (&apos;attrib &quot;..\..\..\game\bin\x64\$(TargetFileName)&quot;&apos;) do set valveTmpIsReadOnly=&quot;%%A&quot;&#x0D;&#x0A;set valveTmpIsReadOnlyLetter=%valveTmpIsReadOnly:~6,1%&#x0D;&#x0A;if &quot;%valveTmpIsReadOnlyLetter%&quot;==&quot;R&quot; del /q &quot;$(TargetDir)&quot;$(TargetFileName)&#x0D;&#x0A;</Command>
+    <PreBuildEvent>
+      <Command>
+      </Command>
     </PreBuildEvent>
-    <ClCompile >
+    <ClCompile>
       <AdditionalOptions> /Gw /Zc:inline /Zc:threadSafeInit- /Wv:18 /Zc:__cplusplus</AdditionalOptions>
       <Optimization>Disabled</Optimization>
       <AdditionalIncludeDirectories>..\..\common;..\..\public;..\..\public\tier0;..\..\public\tier1;..\common</AdditionalIncludeDirectories>
@@ -95,12 +96,12 @@
       <ErrorReporting>Prompt</ErrorReporting>
       <BuildStlModules>false</BuildStlModules>
     </ClCompile>
-    <ResourceCompile >
+    <ResourceCompile>
       <PreprocessorDefinitions>_DEBUG;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <Culture>1033</Culture>
     </ResourceCompile>
-    <PreLinkEvent  />
-    <Link >
+    <PreLinkEvent />
+    <Link>
       <AdditionalOptions>/NXCOMPAT /ignore:4221</AdditionalOptions>
       <AdditionalDependencies>;shell32.lib;user32.lib;advapi32.lib;gdi32.lib;comdlg32.lib;ole32.lib;glu32.lib;opengl32.lib;odbc32.lib;odbccp32.lib;winmm.lib</AdditionalDependencies>
       <ShowProgress>NotSet</ShowProgress>
@@ -110,33 +111,46 @@
       <GenerateDebugInformation>DebugFull</GenerateDebugInformation>
       <ProgramDatabaseFile>$(IntDir)/$(TargetName).pdb</ProgramDatabaseFile>
       <SubSystem>Windows</SubSystem>
-      <BaseAddress> </BaseAddress>
+      <BaseAddress>
+      </BaseAddress>
       <TargetMachine>MachineX64</TargetMachine>
       <LinkErrorReporting>PromptImmediately</LinkErrorReporting>
       <RandomizedBaseAddress>false</RandomizedBaseAddress>
       <ImageHasSafeExceptionHandlers>false</ImageHasSafeExceptionHandlers>
     </Link>
-    <Manifest >
+    <Manifest>
       <SuppressStartupBanner>true</SuppressStartupBanner>
     </Manifest>
-    <Xdcmake >
+    <Xdcmake>
       <SuppressStartupBanner>true</SuppressStartupBanner>
     </Xdcmake>
-    <Bscmake >
+    <Bscmake>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <OutputFile>$(OutDir)/glview.bsc</OutputFile>
     </Bscmake>
-    <PostBuildEvent >
+    <PostBuildEvent>
       <Message>Publishing to ..\..\..\game\bin\x64</Message>
-      <Command>copy &quot;$(TargetDir)&quot;$(TargetFileName) ..\..\..\game\bin\x64\$(TargetFileName) &gt;nul&#x0D;&#x0A;if ERRORLEVEL 1 goto BuildEventFailed&#x0D;&#x0A;if exist &quot;$(TargetDir)&quot;$(TargetName).map copy &quot;$(TargetDir)&quot;$(TargetName).map ..\..\..\game\bin\x64\$(TargetName).map &gt;nul&#x0D;&#x0A;copy &quot;$(TargetDir)&quot;$(TargetName).pdb ..\..\..\game\bin\x64\$(TargetName).pdb &gt;nul&#x0D;&#x0A;if ERRORLEVEL 1 goto BuildEventFailed&#x0D;&#x0A;goto BuildEventOK&#x0D;&#x0A;:BuildEventFailed&#x0D;&#x0A;echo *** ERROR! PostBuildStep FAILED for $(ProjectName)! EXE or DLL is probably running. ***&#x0D;&#x0A;del /q &quot;$(TargetDir)&quot;$(TargetFileName)&#x0D;&#x0A;exit 1&#x0D;&#x0A;:BuildEventOK&#x0D;&#x0A;</Command>
+      <Command>copy "$(TargetDir)"$(TargetFileName) ..\..\..\game\bin\x64\$(TargetFileName) &gt;nul
+if ERRORLEVEL 1 goto BuildEventFailed
+if exist "$(TargetDir)"$(TargetName).map copy "$(TargetDir)"$(TargetName).map ..\..\..\game\bin\x64\$(TargetName).map &gt;nul
+copy "$(TargetDir)"$(TargetName).pdb ..\..\..\game\bin\x64\$(TargetName).pdb &gt;nul
+if ERRORLEVEL 1 goto BuildEventFailed
+goto BuildEventOK
+:BuildEventFailed
+echo *** ERROR! PostBuildStep FAILED for $(ProjectName)! EXE or DLL is probably running. ***
+del /q "$(TargetDir)"$(TargetFileName)
+exit 1
+:BuildEventOK
+</Command>
     </PostBuildEvent>
-    <CustomBuildStep  />
+    <CustomBuildStep />
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
-    <PreBuildEvent >
-      <Command>if EXIST ..\..\..\game\bin\x64\$(TargetFileName) for /f &quot;delims=&quot; %%A in (&apos;attrib &quot;..\..\..\game\bin\x64\$(TargetFileName)&quot;&apos;) do set valveTmpIsReadOnly=&quot;%%A&quot;&#x0D;&#x0A;set valveTmpIsReadOnlyLetter=%valveTmpIsReadOnly:~6,1%&#x0D;&#x0A;if &quot;%valveTmpIsReadOnlyLetter%&quot;==&quot;R&quot; del /q &quot;$(TargetDir)&quot;$(TargetFileName)&#x0D;&#x0A;</Command>
+    <PreBuildEvent>
+      <Command>
+      </Command>
     </PreBuildEvent>
-    <ClCompile >
+    <ClCompile>
       <AdditionalOptions> /Zo /Gw /Zc:inline /Zc:threadSafeInit- /Wv:18 /Zc:__cplusplus</AdditionalOptions>
       <Optimization>MaxSpeed</Optimization>
       <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
@@ -171,12 +185,12 @@
       <ErrorReporting>Prompt</ErrorReporting>
       <BuildStlModules>false</BuildStlModules>
     </ClCompile>
-    <ResourceCompile >
+    <ResourceCompile>
       <PreprocessorDefinitions>NDEBUG;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <Culture>1033</Culture>
     </ResourceCompile>
-    <PreLinkEvent  />
-    <Link >
+    <PreLinkEvent />
+    <Link>
       <AdditionalOptions>/NXCOMPAT /ignore:4221</AdditionalOptions>
       <AdditionalDependencies>;shell32.lib;user32.lib;advapi32.lib;gdi32.lib;comdlg32.lib;ole32.lib;glu32.lib;opengl32.lib;odbc32.lib;odbccp32.lib;winmm.lib</AdditionalDependencies>
       <ShowProgress>NotSet</ShowProgress>
@@ -188,27 +202,39 @@
       <SubSystem>Windows</SubSystem>
       <OptimizeReferences>true</OptimizeReferences>
       <EnableCOMDATFolding>false</EnableCOMDATFolding>
-      <BaseAddress> </BaseAddress>
+      <BaseAddress>
+      </BaseAddress>
       <TargetMachine>MachineX64</TargetMachine>
       <LinkErrorReporting>PromptImmediately</LinkErrorReporting>
       <RandomizedBaseAddress>false</RandomizedBaseAddress>
       <ImageHasSafeExceptionHandlers>false</ImageHasSafeExceptionHandlers>
     </Link>
-    <Manifest >
+    <Manifest>
       <SuppressStartupBanner>true</SuppressStartupBanner>
     </Manifest>
-    <Xdcmake >
+    <Xdcmake>
       <SuppressStartupBanner>true</SuppressStartupBanner>
     </Xdcmake>
-    <Bscmake >
+    <Bscmake>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <OutputFile>$(OutDir)/glview.bsc</OutputFile>
     </Bscmake>
-    <PostBuildEvent >
+    <PostBuildEvent>
       <Message>Publishing to ..\..\..\game\bin\x64</Message>
-      <Command>copy &quot;$(TargetDir)&quot;$(TargetFileName) ..\..\..\game\bin\x64\$(TargetFileName) &gt;nul&#x0D;&#x0A;if ERRORLEVEL 1 goto BuildEventFailed&#x0D;&#x0A;if exist &quot;$(TargetDir)&quot;$(TargetName).map copy &quot;$(TargetDir)&quot;$(TargetName).map ..\..\..\game\bin\x64\$(TargetName).map &gt;nul&#x0D;&#x0A;copy &quot;$(TargetDir)&quot;$(TargetName).pdb ..\..\..\game\bin\x64\$(TargetName).pdb &gt;nul&#x0D;&#x0A;if ERRORLEVEL 1 goto BuildEventFailed&#x0D;&#x0A;goto BuildEventOK&#x0D;&#x0A;:BuildEventFailed&#x0D;&#x0A;echo *** ERROR! PostBuildStep FAILED for $(ProjectName)! EXE or DLL is probably running. ***&#x0D;&#x0A;del /q &quot;$(TargetDir)&quot;$(TargetFileName)&#x0D;&#x0A;exit 1&#x0D;&#x0A;:BuildEventOK&#x0D;&#x0A;</Command>
+      <Command>copy "$(TargetDir)"$(TargetFileName) ..\..\..\game\bin\x64\$(TargetFileName) &gt;nul
+if ERRORLEVEL 1 goto BuildEventFailed
+if exist "$(TargetDir)"$(TargetName).map copy "$(TargetDir)"$(TargetName).map ..\..\..\game\bin\x64\$(TargetName).map &gt;nul
+copy "$(TargetDir)"$(TargetName).pdb ..\..\..\game\bin\x64\$(TargetName).pdb &gt;nul
+if ERRORLEVEL 1 goto BuildEventFailed
+goto BuildEventOK
+:BuildEventFailed
+echo *** ERROR! PostBuildStep FAILED for $(ProjectName)! EXE or DLL is probably running. ***
+del /q "$(TargetDir)"$(TargetFileName)
+exit 1
+:BuildEventOK
+</Command>
     </PostBuildEvent>
-    <CustomBuildStep  />
+    <CustomBuildStep />
   </ItemDefinitionGroup>
   <ItemGroup>
     <Library Include="..\..\lib\public\x64\mathlib.lib" />
