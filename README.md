@@ -1,4 +1,4 @@
-# Source SDK 2013 EX-Ten-ded
+# Source SDK 2013 Ex-Ten-ded
 
 Source code for Source SDK 2013.
 
